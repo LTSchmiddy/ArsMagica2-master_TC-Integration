@@ -115,6 +115,8 @@ public class ArmorEventHandler{
 			event.texture = "arsmagica2:textures/models/ender_1.png";
 		}else if (event.renderIndex == ArmorHelper.getArmorRenderIndex("magitech")){
 			event.texture = "arsmagica2:textures/models/magitech_1.png";
+		} else if (event.renderIndex == ArmorHelper.getArmorRenderIndex("combo_goggles")){
+			event.texture = "arsmagica2:textures/models/combo_goggles.png";
 		}
 	}
 }

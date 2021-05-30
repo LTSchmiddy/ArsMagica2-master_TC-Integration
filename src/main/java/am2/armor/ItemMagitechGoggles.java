@@ -3,12 +3,13 @@ package am2.armor;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.IIcon;
+import am2.api.items.armor.IShowMagitechInfo;
 
 import net.minecraft.entity.EntityLivingBase;
 // import thaumcraft.api.nodes.IRevealer;
 // import thaumcraft.api.IGoggles;
 
-public class ItemMagitechGoggles extends AMArmor {
+public class ItemMagitechGoggles extends AMArmor implements IShowMagitechInfo {
 // public class ItemMagitechGoggles extends AMArmor implements IRevealer, IGoggles {
 
 	public ItemMagitechGoggles(int renderIndex){

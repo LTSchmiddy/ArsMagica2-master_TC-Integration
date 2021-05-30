@@ -1,5 +1,6 @@
 package am2.interop.tc4;
 
+
 import am2.LogHelper;
 import am2.blocks.BlocksCommonProxy;
 import am2.entities.EntityManager;
@@ -9,13 +10,12 @@ import thaumcraft.api.ThaumcraftApi;
 import thaumcraft.api.aspects.Aspect;
 import thaumcraft.api.aspects.AspectList;
 
-import am2.interop.tc4.items.TC4ItemsCommonProxy;
 
 public class TC4Interop{
 	
 	private static boolean isTC4Present;
 	
-	public static TC4ItemsCommonProxy itemsProxy;
+	public static TC4CommonProxy proxy;
 	
 	
 	public static boolean isTC4Present() {
@@ -25,10 +25,8 @@ public class TC4Interop{
 	public static void initialize(){
 		isTC4Present = true;
 		
-		itemsProxy = new TC4ItemsCommonProxy ();
-		itemsProxy.InstantiateItems();
-		itemsProxy.RegisterItems();
-		
+		proxy = new TC4CommonProxy();
+		proxy.initialize();
 		
 		LogHelper.info("Initializing Thaumcraft Compatibility");
 		initTCAspects();

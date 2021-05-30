@@ -3,6 +3,7 @@ package am2;
 import am2.api.math.AMVector3;
 import am2.api.power.IPowerNode;
 import am2.api.power.PowerTypes;
+import am2.api.items.armor.IShowMagitechInfo;
 import am2.armor.AMArmor;
 import am2.armor.ArmorHelper;
 import am2.armor.infusions.GenericImbuement;
@@ -53,7 +54,8 @@ public class AMClientEventHandler{
 	public void onBlockHighlight(DrawBlockHighlightEvent event){
 
 		if (AMCore.proxy.getLocalPlayer().getCurrentArmor(3) != null &&
-				(AMCore.proxy.getLocalPlayer().getCurrentArmor(3).getItem() == ItemsCommonProxy.magitechGoggles ||
+//				(AMCore.proxy.getLocalPlayer().getCurrentArmor(3).getItem() == ItemsCommonProxy.magitechGoggles ||
+				(AMCore.proxy.getLocalPlayer().getCurrentArmor(3).getItem() instanceof IShowMagitechInfo ||
 						ArmorHelper.isInfusionPreset(AMCore.proxy.getLocalPlayer().getCurrentArmor(3), GenericImbuement.magitechGoggleIntegration))
 				){
 

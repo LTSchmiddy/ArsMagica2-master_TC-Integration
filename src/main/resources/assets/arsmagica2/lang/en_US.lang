@@ -727,3 +727,15 @@ achievement.componentUnlock=Discovered Spell Part
 Epic Mana Restoration.postfix=Epic Mana Potion
 Greater Mana Restoration.postfix=Greater Mana Potion
 Legendary Mana Restoration.postfix=Legendary Mana Potion
+
+
+# TC4 Interop Items: -------------------------------------------------------------
+item.arsmagica2:gogglesrevealing.name=Magitech Goggles of Revealing
+
+tc.research_category.THAUMIC_WIZARDRY=Thaumic Wizardry
+tc.research_name.tw_Intro=The Art of Wizardry
+tc.research_text.tw_Intro=Another approach...
+
+
+
+

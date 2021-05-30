@@ -16,13 +16,11 @@ public class ItemMagitechGogglesOfRevealing extends ItemMagitechGoggles implemen
 
 	@Override
 	public boolean showNodes(ItemStack itemstack, EntityLivingBase player) {
-		// TODO Auto-generated method stub
 		return true;
 	}
 
 	@Override
 	public boolean showIngamePopups(ItemStack itemstack, EntityLivingBase player) {
-		// TODO Auto-generated method stub
 		return true;
 	}
 

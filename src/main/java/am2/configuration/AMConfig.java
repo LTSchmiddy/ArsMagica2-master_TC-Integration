@@ -183,6 +183,11 @@ public class AMConfig extends Configuration{
 	private static final String CATEGORY_ENCHANTMENTS = "enchantments";
 	private static final String CATEGORY_UI = "guis";
 	private static final String CATEGORY_POTIONS = "potions";
+	
+	//Added by Alex:
+	private static final String CATEGORY_MAKE_SPELL_BUTTON = "Make Spell Button";
+	
+	// End of Addition.
 
 	private int GFXLevel;
     // Added by Alex:
@@ -308,10 +313,10 @@ public class AMConfig extends Configuration{
 
 	public void init(){
         // Added by Alex:
-		SurvivalModeMakeSpellButton = get(CATEGORY_GENERAL, KEY_SurvivalModeMakeSpellButton, true, "In survival mode, highe level players can make simpler spells w/o needing a Crafting Alter.").getBoolean(true);
-		SurvivalModeMakeSpellButton_StartingLevel = get(CATEGORY_GENERAL, KEY_SurvivalModeMakeSpellButton_StartingLevel, 10, "What level can you start making free spells?").getInt();
-		SurvivalModeMakeSpellButton_StartingParts = get(CATEGORY_GENERAL, KEY_SurvivalModeMakeSpellButton_StartingParts, 3, "How many free spell parts do you start with?").getInt();
-		SurvivalModeMakeSpellButton_Increment = get(CATEGORY_GENERAL, KEY_SurvivalModeMakeSpellButton_Increment, 20, "How many levels in between getting another free spell part?").getInt();
+		SurvivalModeMakeSpellButton = get(CATEGORY_MAKE_SPELL_BUTTON, KEY_SurvivalModeMakeSpellButton, true, "In survival mode, high level players can make simpler spells w/o needing a Crafting Alter.").getBoolean(true);
+		SurvivalModeMakeSpellButton_StartingLevel = get(CATEGORY_MAKE_SPELL_BUTTON, KEY_SurvivalModeMakeSpellButton_StartingLevel, 10, "What level can you start making free spells?").getInt();
+		SurvivalModeMakeSpellButton_StartingParts = get(CATEGORY_MAKE_SPELL_BUTTON, KEY_SurvivalModeMakeSpellButton_StartingParts, 3, "How many free spell parts do you start with?").getInt();
+		SurvivalModeMakeSpellButton_Increment = get(CATEGORY_MAKE_SPELL_BUTTON, KEY_SurvivalModeMakeSpellButton_Increment, 20, "How many levels in between getting another free spell part?").getInt();
         // End of Addition.
         
 		PlayerSpellsDamageTerrain = get(CATEGORY_GENERAL, KEY_PlayerSpellsDamageTerrain, true, "Set to false to prevent terrain damage from player-casted spells.").getBoolean(true);

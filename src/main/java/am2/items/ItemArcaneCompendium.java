@@ -15,7 +15,7 @@ import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import am2.texture.ResourceManager;
 
-public class ItemArcaneCompendium extends ArsMagicaItem{
+public class ItemArcaneCompendium extends ArsMagicaItem {
 
 	public ItemArcaneCompendium(){
 		super();
@@ -39,4 +39,19 @@ public class ItemArcaneCompendium extends ArsMagicaItem{
 	public void registerIcons(IIconRegister par1IconRegister){
 		this.itemIcon = ResourceManager.RegisterTexture("arcanecompendium", par1IconRegister);
 	}
+	
+	
+	// Ive added this section so that the Arcane Compendium isn't consumed when crafting the initial Thaumic Wizardry Research.
+	// Added By Alex:
+	@Override
+	public boolean hasContainerItem() {
+		return true;
+	}
+
+	@Override
+	public ItemStack getContainerItem(ItemStack itemStack) {
+		return itemStack;
+	}
+	
+	// End Of Addition.
 }

@@ -1,0 +1,1 @@
+gradle build && echo "Moving file to game mod folder..." && copy /Y ".\build\libs\AM2-1.4.0.009.jar" "D:\Project Z\codenameAmericanDream\mmc-stable-win32\MultiMC\instances\1.7.101\.minecraft\mods"

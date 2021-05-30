@@ -50,8 +50,7 @@ import net.minecraftforge.fluids.FluidContainerRegistry.FluidContainerData;
 import net.minecraftforge.fluids.FluidRegistry;
 
 import java.io.File;
-
-@Mod(modid = "arsmagica2", modLanguage = "java", name = "Ars Magica 2", version = "1.4.0.009", dependencies = "required-after:AnimationAPI")
+@Mod(modid = "arsmagica2", modLanguage = "java", name = "Ars Magica 2", version = "1.4.0.009", dependencies = "required-after:AnimationAPI;after:Thaumcraft")
 public class AMCore{
 
 	@Instance(value = "arsmagica2")
@@ -294,5 +293,9 @@ public class AMCore{
 	public String getVersion(){
 		Mod modclass = this.getClass().getAnnotation(Mod.class);
 		return modclass.version();
+	}
+	
+	public static boolean usingTC4() {
+		return TC4Interop.isTC4Present();
 	}
 }
